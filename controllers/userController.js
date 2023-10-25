@@ -103,8 +103,11 @@ const loginUser = asyncHandler(
             res.status(200).json({accessToken})
         }
         else{
-            res.status(401)
-            throw new Error("email or password not valid")
+            res.status(200).json(
+                {
+                    msg:"Password doesn't matched"
+                }
+            )
         }
     }
 )
