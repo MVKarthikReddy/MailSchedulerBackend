@@ -11,7 +11,8 @@ const scheduleMail = asyncHandler(
 
         const user_id = req.user.id
      
-
+        console.log(user_id)
+        
         const {from,to,cc,bcc,subject,body,date,time} = req.body
         // console.log(req.body)
         // if(!from || !to || !subject || !body || !time){
